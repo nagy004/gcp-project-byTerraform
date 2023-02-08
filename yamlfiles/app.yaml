@@ -1,0 +1,22 @@
+piVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nagy-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: my-app
+  template:
+    metadata:
+      labels:
+        name: my-app
+    spec:
+      containers:
+      - name: my-app
+        image: gcr.io/nagyproject/python:1.0
+        ports:
+        - containerPort: 80
+        envFrom:
+        - configMapRef:
+            name: app-cm
