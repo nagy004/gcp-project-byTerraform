@@ -108,12 +108,9 @@ The aim of this project is to build full infrastructure to deploy a python app i
     kubectl get services
     ```
 
-    ![result of get scv](result_Pics/LoadBalancerResult.png "External IP")
-
     and here we will take the External IP of the load balancer and the assigned port like that
 
     ```http:\\34.133.191.251:8000```
+    and then put it in the Browser to see  the result 
 
-## And the output will be like that
 
-![result of get scv](result_Pics/output.png "Output")
