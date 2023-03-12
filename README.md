@@ -4,9 +4,9 @@ The aim of this project is to build full infrastructure to deploy a python app i
 
 ## This Repo contains the following folders
 
-1. Devops-Challenge-Demo-Code - It contains python code and Dockerfile.
-2. K8s Commands - It contains the essential files (.yaml).
-3. Terraform Directories - it contains Directories and main.tf file to build our infra
+1. app-python - It contains python code and Dockerfile.
+2. YamilFiles - It contains the essential files (.yaml).
+3. Terraform files  to build our infra
 
 ## Dependencies
 
@@ -47,7 +47,7 @@ The aim of this project is to build full infrastructure to deploy a python app i
       - Leave the "Key Type" as JSON.
       - Click "Create" to create the key and save the key file to your system.
   
-2. Clone current repository [GCP first infrastructure building project](https://github.com/Aly-Ghazal/GCP-first-infrastructure-building-project)
+2. Clone current repository [GCP first infrastructure building project](https://github.com/nagy004/gcp-project-byTerraform)
 
     Note: Don't forget to copy credintial key to this directory and chenge it in code and also change project id with project id you created
 
@@ -62,13 +62,13 @@ The aim of this project is to build full infrastructure to deploy a python app i
 
 3. From Local build and push images to GCR
 
-   NOTE: Dockerfile will be found in Devops-Challenge-Demo-Code folder
+   NOTE: Dockerfile will be found in app-python
 
     TO BUILD IMAGE
 
     ``` bash
-    cp Dockerfile /DevOps-Challenge-Demo-Code/Dockerfile
-    cd Devops-Challenge-Demo-Code
+    cp Dockerfile app-python
+    cd app-python
     # tag should be hostname/projectID/imgName
     docker build . -t us.gcr.io/<project_id>/python-sample-app:v1.0 
     ```
